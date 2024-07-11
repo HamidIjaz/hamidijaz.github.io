@@ -1,1 +1,0 @@
-# hamidijaz.github.io
