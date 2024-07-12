@@ -31,7 +31,7 @@
         margin-top: 0.4em;
       }
 
-      @media (max-width: 600px) {
+      /* @media (max-width: 600px) {
         .nav__list {
           display: none;
           flex-direction: column;
@@ -53,7 +53,7 @@
           z-index: 2;
           margin-left: 0.8em;
         }
-      }
+      } */
 
       /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvY29tcG9uZW50cy9OYXZiYXIvTmF2YmFyLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1CQUFtQjtFQUNuQixhQUFhO0FBQ2Y7QUFDQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFO0lBQ0UsYUFBYTtJQUNiLHNCQUFzQjtJQUN0Qix1QkFBdUI7SUFDdkIsbUJBQW1CO0lBQ25CLGVBQWU7SUFDZixRQUFRO0lBQ1IsV0FBVztJQUNYLFlBQVk7SUFDWixVQUFVO0VBQ1o7O0VBRUE7SUFDRSxlQUFlO0VBQ2pCOztFQUVBO0lBQ0UsYUFBYTtJQUNiLFVBQVU7SUFDVixrQkFBa0I7RUFDcEI7QUFDRiIsInNvdXJjZXNDb250ZW50IjpbIi5uYXZfX2xpc3Qge1xuICBtYXJnaW4tcmlnaHQ6IDEuNWVtO1xuICBkaXNwbGF5OiBmbGV4O1xufVxuLm5hdl9fbGlzdC1pdGVtIHtcbiAgbWFyZ2luLWxlZnQ6IDEuNWVtO1xufVxuXG4uYXBwIC5uYXZfX2hhbWJ1cmdlciB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG5cbi5uYXZfX3RoZW1lIHtcbiAgbWFyZ2luLXRvcDogMC40ZW07XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA2MDBweCkge1xuICAubmF2X19saXN0IHtcbiAgICBkaXNwbGF5OiBub25lO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgaW5zZXQ6IDA7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHotaW5kZXg6IDI7XG4gIH1cblxuICAubmF2X19saXN0LWl0ZW0ge1xuICAgIG1hcmdpbjogMC41ZW0gMDtcbiAgfVxuXG4gIC5hcHAgLm5hdl9faGFtYnVyZ2VyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIHotaW5kZXg6IDI7XG4gICAgbWFyZ2luLWxlZnQ6IDAuOGVtO1xuICB9XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */
     </style>
@@ -239,6 +239,8 @@
         --clr-fg-alt: #444;
         --clr-primary: #2978b5;
         --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background-color: var(--clr-bg);
+        color: var(--clr-fg);
       }
 
       .dark {
@@ -249,6 +251,8 @@
         --clr-primary: #90a0d9;
         --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
           rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        background-color: var(--clr-bg);
+        color: var(--clr-fg);
       }
 
       main {
@@ -523,7 +527,7 @@
       <div id="top" class="dark app">
         <header class="header center">
           <h3>
-            <a href="https://rjshkhr.github.io/cleanfolio" class="link">JS.</a>
+            <a href="https://hamidijaz.github.io/" class="link">HI.</a>
           </h3>
           <nav class="center nav">
             <ul class="nav__list">
@@ -537,22 +541,26 @@
                 <a href="#contact" class="link link--nav">Contact</a>
               </li>
             </ul>
+
             <button
               type="button"
               class="btn btn--icon nav__theme"
               aria-label="toggle theme"
+              id="theme-toggle"
             >
               <svg
                 class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
+                id="theme-icon"
               >
                 <path
                   d="M6.05 4.14l-.39-.39c-.39-.39-1.02-.38-1.4 0l-.01.01c-.39.39-.39 1.02 0 1.4l.39.39c.39.39 1.01.39 1.4 0l.01-.01c.39-.38.39-1.02 0-1.4zM3.01 10.5H1.99c-.55 0-.99.44-.99.99v.01c0 .55.44.99.99.99H3c.56.01 1-.43 1-.98v-.01c0-.56-.44-1-.99-1zm9-9.95H12c-.56 0-1 .44-1 .99v.96c0 .55.44.99.99.99H12c.56.01 1-.43 1-.98v-.97c0-.55-.44-.99-.99-.99zm7.74 3.21c-.39-.39-1.02-.39-1.41-.01l-.39.39c-.39.39-.39 1.02 0 1.4l.01.01c.39.39 1.02.39 1.4 0l.39-.39c.39-.39.39-1.01 0-1.4zm-1.81 15.1l.39.39c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-.39-.39c-.39-.39-1.02-.38-1.4 0-.4.4-.4 1.02-.01 1.41zM20 11.49v.01c0 .55.44.99.99.99H22c.55 0 .99-.44.99-.99v-.01c0-.55-.44-.99-.99-.99h-1.01c-.55 0-.99.44-.99.99zM12 5.5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-.01 16.95H12c.55 0 .99-.44.99-.99v-.96c0-.55-.44-.99-.99-.99h-.01c-.55 0-.99.44-.99.99v.96c0 .55.44.99.99.99zm-7.74-3.21c.39.39 1.02.39 1.41 0l.39-.39c.39-.39.38-1.02 0-1.4l-.01-.01a.9959.9959 0 00-1.41 0l-.39.39c-.38.4-.38 1.02.01 1.41z"
                 ></path>
-              </svg></button
-            ><button
+              </svg>
+            </button>
+            <!-- <button
               type="button"
               class="btn btn--icon nav__hamburger"
               aria-label="toggle navigation"
@@ -565,7 +573,7 @@
               >
                 <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
               </svg>
-            </button>
+            </button> -->
           </nav>
         </header>
         <main>
@@ -805,6 +813,52 @@
     <script src="/cleanfolio/static/js/bundle.js"></script>
     <script src="/cleanfolio/static/js/vendors~main.chunk.js"></script>
     <script src="/cleanfolio/static/js/main.chunk.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const themeIcon = document.getElementById("theme-icon");
+        const content = document.getElementById("top");
+        const themeToggleBtn = document.getElementById("theme-toggle");
+        let isDarkTheme = true;
+
+        if (
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
+          content.classList.replace("light", "dark");
+          themeIcon.innerHTML = `
+            <path
+            d="M6.05 4.14l-.39-.39c-.39-.39-1.02-.38-1.4 0l-.01.01c-.39.39-.39 1.02 0 1.4l.39.39c.39.39 1.01.39 1.4 0l.01-.01c.39-.38.39-1.02 0-1.4zM3.01 10.5H1.99c-.55 0-.99.44-.99.99v.01c0 .55.44.99.99.99H3c.56.01 1-.43 1-.98v-.01c0-.56-.44-1-.99-1zm9-9.95H12c-.56 0-1 .44-1 .99v.96c0 .55.44.99.99.99H12c.56.01 1-.43 1-.98v-.97c0-.55-.44-.99-.99-.99zm7.74 3.21c-.39-.39-1.02-.39-1.41-.01l-.39.39c-.39.39-.39 1.02 0 1.4l.01.01c.39.39 1.02.39 1.4 0l.39-.39c.39-.39.39-1.01 0-1.4zm-1.81 15.1l.39.39c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-.39-.39c-.39-.39-1.02-.38-1.4 0-.4.4-.4 1.02-.01 1.41zM20 11.49v.01c0 .55.44.99.99.99H22c.55 0 .99-.44.99-.99v-.01c0-.55-.44-.99-.99-.99h-1.01c-.55 0-.99.44-.99.99zM12 5.5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-.01 16.95H12c.55 0 .99-.44.99-.99v-.96c0-.55-.44-.99-.99-.99h-.01c-.55 0-.99.44-.99.99v.96c0 .55.44.99.99.99zm-7.74-3.21c.39.39 1.02.39 1.41 0l.39-.39c.39-.39.38-1.02 0-1.4l-.01-.01a.9959.9959 0 00-1.41 0l-.39.39c-.38.4-.38 1.02.01 1.41z"
+            ></path>
+            `;
+        } else {
+          isDarkTheme = false;
+          content.classList.replace("dark", "light");
+          themeIcon.innerHTML = `
+        <path
+          d="M10 2c-1.82 0-3.53.5-5 1.35C7.99 5.08 10 8.3 10 12s-2.01 6.92-5 8.65C6.47 21.5 8.18 22 10 22c5.52 0 10-4.48 10-10S15.52 2 10 2z"
+        ></path>`;
+        }
+
+        themeToggleBtn.addEventListener("click", () => {
+          isDarkTheme = !isDarkTheme;
+          if (isDarkTheme) {
+            content.classList.replace("light", "dark");
+            themeIcon.innerHTML = `
+            <path
+            d="M6.05 4.14l-.39-.39c-.39-.39-1.02-.38-1.4 0l-.01.01c-.39.39-.39 1.02 0 1.4l.39.39c.39.39 1.01.39 1.4 0l.01-.01c.39-.38.39-1.02 0-1.4zM3.01 10.5H1.99c-.55 0-.99.44-.99.99v.01c0 .55.44.99.99.99H3c.56.01 1-.43 1-.98v-.01c0-.56-.44-1-.99-1zm9-9.95H12c-.56 0-1 .44-1 .99v.96c0 .55.44.99.99.99H12c.56.01 1-.43 1-.98v-.97c0-.55-.44-.99-.99-.99zm7.74 3.21c-.39-.39-1.02-.39-1.41-.01l-.39.39c-.39.39-.39 1.02 0 1.4l.01.01c.39.39 1.02.39 1.4 0l.39-.39c.39-.39.39-1.01 0-1.4zm-1.81 15.1l.39.39c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-.39-.39c-.39-.39-1.02-.38-1.4 0-.4.4-.4 1.02-.01 1.41zM20 11.49v.01c0 .55.44.99.99.99H22c.55 0 .99-.44.99-.99v-.01c0-.55-.44-.99-.99-.99h-1.01c-.55 0-.99.44-.99.99zM12 5.5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-.01 16.95H12c.55 0 .99-.44.99-.99v-.96c0-.55-.44-.99-.99-.99h-.01c-.55 0-.99.44-.99.99v.96c0 .55.44.99.99.99zm-7.74-3.21c.39.39 1.02.39 1.41 0l.39-.39c.39-.39.38-1.02 0-1.4l-.01-.01a.9959.9959 0 00-1.41 0l-.39.39c-.38.4-.38 1.02.01 1.41z"
+            ></path>
+            `;
+          } else {
+            content.classList.replace("dark", "light");
+            themeIcon.innerHTML = `
+        <path
+          d="M10 2c-1.82 0-3.53.5-5 1.35C7.99 5.08 10 8.3 10 12s-2.01 6.92-5 8.65C6.47 21.5 8.18 22 10 22c5.52 0 10-4.48 10-10S15.52 2 10 2z"
+        ></path>
+      `;
+          }
+        });
+      });
+    </script>
 
     <div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb">
       <section id="shadow-host-companion"></section>
